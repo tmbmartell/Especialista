@@ -38,6 +38,15 @@
     content.append(list);
     content.append($el('p','experience-disclaimer',item.disclaimer));
     content.append($el('p','experience-status','Prévia da experiência: ainda sem IA, pagamento ou atendimento pelo WhatsApp.'));
+    if (item.slug === 'solte-esse-peso' || item.slug === 'reconheca-seu-valor') {
+      const button=$el('button','account-action','Experimentar conversa curta');
+      button.type='button';
+      button.addEventListener('click',()=>{
+        dialog.close();
+        window.startPilotDemo?.(item.slug);
+      });
+      content.append(button);
+    }
     if (item.slug === 'coragem-para-ir') {
       const button=$el('button','account-action','Experimentar conversa curta');
       button.type='button';
