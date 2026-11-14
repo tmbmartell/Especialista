@@ -1,9 +1,28 @@
-# Somente ambiente local. Não conectar dados ou credenciais reais.
+# Sandbox somente no localhost. Não use credenciais ou dados reais.
+name: especialista-sandbox
 services:
+  api:
+    build:
+      context: ..
+      dockerfile: apps/api/Dockerfile
+    environment:
+      NG_DEMO_MODE: "true"
+      NG_COOKIE_SECURE: "false"
+      NG_DB_PATH: "/data/sandbox.sqlite3"
+    volumes:
+      - sandbox_db:/data
+    read_only: true
+    tmpfs:
+      - /tmp
+    networks:
+      - internal
+    restart: "no"
   web:
     build:
       context: ..
       dockerfile: apps/web/Dockerfile
+    depends_on:
+      - api
     ports:
       - "127.0.0.1:8088:80"
     read_only: true
@@ -11,12 +30,11 @@ services:
       - /var/cache/nginx
       - /var/run
       - /tmp
+    networks:
+      - internal
     restart: "no"
-  api:
-    build:
-      context: ..
-      dockerfile: apps/api/Dockerfile
-    ports:
-      - "127.0.0.1:8090:8090"
-    read_only: true
-    restart: "no"
+networks:
+  internal:
+    internal: true
+volumes:
+  sandbox_db:
