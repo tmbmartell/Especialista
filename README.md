@@ -76,3 +76,23 @@ A API expõe `GET /api/experiences` e `GET /api/experiences/{slug}/preview`.
 As respostas sinalizam `previewOnly=true` e `availableForSale=false`.
 Os prompts privados, textos de livros e documentos dos plugins não foram
 publicados nem conectados. Veja [matriz de jornadas e segurança](docs/F2_METODOLOGIAS.md).
+
+
+## Primeiro roteiro interativo — Coragem para Ir (sandbox)
+
+A branch `feat/coragem-engine-v1` introduz um roteiro **original de
+seis passos**, com respostas breves, analogias pontuais, uma pergunta
+por vez, liberdade para pular/voltar/reiniciar e resumo com próximo
+passo escolhido pelo usuário. A vitrine permite experimentar esse
+roteiro pelo botão **Conhecer experiência → Experimentar conversa curta**,
+após login fictício no sandbox.
+
+**Não é uma IA conectada.** As respostas são produzidas por regras
+do protótipo; a metodologia proprietária completa do plugin não foi
+copiada nem publicada. Há triagem lexical preliminar, não apta a
+produção. [Entenda o fluxo, os limites e os testes](docs/CORAGEM_V1.md).
+
+O contrato de estilo compartilhado pelos 13 perfis está em
+[Engenharia de Conversa](docs/ENGENHARIA_CONVERSA.md).
+
+Validação em sandbox isolado: **35 testes automatizados aprovados**.

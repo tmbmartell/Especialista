@@ -10,6 +10,7 @@
   <script defer src="./experience.js"></script>
   <script defer src="./app.js"></script>
   <script defer src="./account.js"></script>
+  <script defer src="./coragem-demo.js"></script>
 </head>
 <body>
   <header class="header shell">
@@ -50,5 +51,21 @@
   <footer class="shell"><span>Especialista · Nova Gente</span><span>*WhatsApp, pagamentos e IA ainda não integrados. Proposta educativa, não clínica.</span></footer>
   <dialog id="account-dialog" class="account-dialog" aria-label="Minha conta de teste"><button id="close-account" type="button" class="account-close" aria-label="Fechar">×</button><div id="account-content"></div></dialog>
   <dialog id="experience-dialog" class="account-dialog experience-dialog" aria-label="Conhecer especialista"><button id="close-experience" type="button" class="account-close" aria-label="Fechar prévia">×</button><div id="experience-content"></div></dialog>
+  <dialog id="coragem-demo-dialog" class="account-dialog coragem-dialog" aria-label="Conversa de demonstração Coragem para Ir">
+    <header class="coragem-header">
+      <div><p class="eyebrow">CORAGEM PARA IR</p><h2>Vamos conversar?</h2><span id="coragem-progress">Etapa 1 de 6</span></div>
+      <button id="coragem-close" class="account-close" type="button" aria-label="Fechar conversa">×</button>
+    </header>
+    <div id="coragem-log" class="coragem-log" role="log" aria-live="polite" aria-relevant="additions text"></div>
+    <form id="coragem-form" class="coragem-form">
+      <label for="coragem-input">Sua resposta</label>
+      <textarea id="coragem-input" rows="2" maxlength="1000" placeholder="Responda com suas palavras…" autocomplete="off"></textarea>
+      <div class="coragem-actions">
+        <button type="button" id="coragem-reset" class="coragem-restart">Recomeçar</button>
+        <button id="coragem-send" class="account-action" type="submit">Enviar</button>
+      </div>
+    </form>
+    <p id="coragem-status" class="experience-status">Roteiro de teste, sem IA real.</p>
+  </dialog>
 </body>
 </html>
