@@ -1,0 +1,22 @@
+# Somente ambiente local. Não conectar dados ou credenciais reais.
+services:
+  web:
+    build:
+      context: ..
+      dockerfile: apps/web/Dockerfile
+    ports:
+      - "127.0.0.1:8088:80"
+    read_only: true
+    tmpfs:
+      - /var/cache/nginx
+      - /var/run
+      - /tmp
+    restart: "no"
+  api:
+    build:
+      context: ..
+      dockerfile: apps/api/Dockerfile
+    ports:
+      - "127.0.0.1:8090:8090"
+    read_only: true
+    restart: "no"
