@@ -22,7 +22,7 @@ QUESTIONS = {
 LEADS = {
     "impact": "Entendi. Vamos olhar para o efeito disso.",
     "prediction": "É bom reconhecer o que isso tem custado.",
-    "evidence": "O medo às vezes parece certeza. Vamos separar as coisas.",
+    "evidence": "O medo é como um alarme: merece atenção, não obediência automática.",
     "choice": "Você já olhou para o risco. Agora pense nas opções.",
     "timing": "Pequenos passos costumam ser mais viáveis.",
 }
