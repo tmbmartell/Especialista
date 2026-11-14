@@ -80,6 +80,7 @@
     try{await load();}catch(error){notice(error.message);}
     action('Criar pedido demonstrativo',async()=>{
       try {
+        await saveQueue;
         const result=await api('/me/orders',{method:'POST'});
         notice('Pedido '+result.order_id.slice(0,8)+' criado. Nenhuma cobrança foi feita e nenhum especialista foi liberado.');
         await load();
