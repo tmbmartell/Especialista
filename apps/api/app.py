@@ -9,7 +9,10 @@ from pydantic import BaseModel, Field
 DEFAULT_CATALOG = Path(__file__).resolve().parents[1] / "web" / "catalogo.json"
 CATALOG_PATH = Path(os.environ.get("CATALOG_PATH", str(DEFAULT_CATALOG)))
 
-app = FastAPI(title="Especialista — Nova Gente (sandbox)", version="0.1.0")
+app = FastAPI(title="Especialista — Nova Gente (sandbox)", version="0.2.0")
+
+from auth import router as identity_router
+app.include_router(identity_router)
 
 class QuoteRequest(BaseModel):
     slugs: list[str] = Field(default_factory=list, max_length=13)
