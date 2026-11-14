@@ -65,3 +65,14 @@ A verificação isolada de 13 testes foi concluída com sucesso. Consulte
 o e-mail não é verificado, há SQLite e não PostgreSQL, e o projeto permanece
 em fases iniciais. Metodologias proprietárias e segredos não pertencem ao
 repositório público.
+
+## F2 — Identidades e jornadas (prévia em revisão)
+
+A vitrine permite **conhecer as experiências** dos 13 especialistas: propósito,
+pergunta inicial, voz e quatro etapas resumidas. Esses dados vêm de
+`apps/web/experiencias.json`, que contém apenas descrições públicas.
+
+A API expõe `GET /api/experiences` e `GET /api/experiences/{slug}/preview`.
+As respostas sinalizam `previewOnly=true` e `availableForSale=false`.
+Os prompts privados, textos de livros e documentos dos plugins não foram
+publicados nem conectados. Veja [matriz de jornadas e segurança](docs/F2_METODOLOGIAS.md).

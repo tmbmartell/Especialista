@@ -15,4 +15,4 @@
 N0 planejado → N1 especificado → N2 desenvolvido → N3 integrado → N4 homologado → N5 publicado.
 
 ## Entrega atual
-Apenas **prévia da vitrine comercial** em `apps/web` e manifesto comercial dos 13 itens. Não é sistema de produção. A API completa e os conectores não foram implantados neste repositório.
+A **vitrine demonstrativa e API de orçamento** estão no código. F1 implementou contas e carrinho em sandbox (não homologados para produção). F2 tem **13 identidades públicas e etapas resumidas de jornada**, API de prévias e interface de exploração; os conteúdos integrais dos plugins ainda NÃO foram migrados, autorizados, testados ou integrados ao modelo conversacional. Pagamento, JEV, WAHA e DeepSeek seguem desconectados. Consulte [F2 Metodologias](F2_METODOLOGIAS.md).

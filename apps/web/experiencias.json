@@ -1,0 +1,400 @@
+{
+  "version": "0.2.0-preview",
+  "brand": "Nova Gente",
+  "publicDataOnly": true,
+  "modelConnected": false,
+  "whatsappConnected": false,
+  "paymentConnected": false,
+  "items": [
+    {
+      "slug": "a-virada-de-chave",
+      "purpose": "Explorar decisões e interpretações que se repetem",
+      "voice": "Investigativa e direta, sem rótulos nem verdades absolutas",
+      "firstQuestion": "Me conta uma situação recente que você gostaria de compreender de outro jeito.",
+      "inputMode": "text",
+      "stages": [
+        {
+          "id": "situacao",
+          "title": "Situação real"
+        },
+        {
+          "id": "perspectiva",
+          "title": "Leitura pessoal"
+        },
+        {
+          "id": "alternativas",
+          "title": "Alternativas"
+        },
+        {
+          "id": "acao",
+          "title": "Próxima atitude"
+        }
+      ],
+      "previewOnly": true,
+      "contentReview": "pendente",
+      "sourceMaterial": "privado-nao-incluido",
+      "availability": "not_for_sale",
+      "disclaimer": "Reflexão educativa; não substitui atendimento psicológico, médico ou jurídico."
+    },
+    {
+      "slug": "quebre-o-ciclo",
+      "purpose": "Perceber repetições e construir respostas diferentes",
+      "voice": "Questionadora, prática e respeitosa",
+      "firstQuestion": "Qual situação você sente que acaba vivendo de novo, mesmo querendo fazer diferente?",
+      "inputMode": "text",
+      "stages": [
+        {
+          "id": "situacao",
+          "title": "O episódio"
+        },
+        {
+          "id": "perspectiva",
+          "title": "O que se repete"
+        },
+        {
+          "id": "alternativas",
+          "title": "Outra escolha"
+        },
+        {
+          "id": "acao",
+          "title": "Experimento da semana"
+        }
+      ],
+      "previewOnly": true,
+      "contentReview": "pendente",
+      "sourceMaterial": "privado-nao-incluido",
+      "availability": "not_for_sale",
+      "disclaimer": "Reflexão educativa; não substitui atendimento psicológico, médico ou jurídico."
+    },
+    {
+      "slug": "cartas-e-caminhos",
+      "purpose": "Usar o tarô como linguagem simbólica para reflexão",
+      "voice": "Imaginativa e serena, sem previsões deterministas",
+      "firstQuestion": "Você gostaria de explorar uma pergunta específica ou fazer uma leitura mais aberta?",
+      "inputMode": "cards",
+      "stages": [
+        {
+          "id": "situacao",
+          "title": "Definir a pergunta"
+        },
+        {
+          "id": "perspectiva",
+          "title": "Selecionar cartas"
+        },
+        {
+          "id": "alternativas",
+          "title": "Interpretar símbolos"
+        },
+        {
+          "id": "acao",
+          "title": "Refletir e agir"
+        }
+      ],
+      "previewOnly": true,
+      "contentReview": "pendente",
+      "sourceMaterial": "privado-nao-incluido",
+      "availability": "not_for_sale",
+      "disclaimer": "Experiência simbólica e recreativa; não prevê o futuro nem substitui orientação profissional."
+    },
+    {
+      "slug": "raizes-e-lacos",
+      "purpose": "Explorar narrativas familiares e limites atuais",
+      "voice": "Acolhedora e cuidadosa, sem atribuir causas não comprovadas",
+      "firstQuestion": "Que relação familiar você gostaria de olhar com mais calma hoje?",
+      "inputMode": "text",
+      "stages": [
+        {
+          "id": "situacao",
+          "title": "Situação atual"
+        },
+        {
+          "id": "perspectiva",
+          "title": "Histórias conhecidas"
+        },
+        {
+          "id": "alternativas",
+          "title": "Perspectivas possíveis"
+        },
+        {
+          "id": "acao",
+          "title": "Escolhas de agora"
+        }
+      ],
+      "previewOnly": true,
+      "contentReview": "pendente",
+      "sourceMaterial": "privado-nao-incluido",
+      "availability": "not_for_sale",
+      "disclaimer": "Reflexão educativa; não substitui atendimento psicológico, médico ou jurídico."
+    },
+    {
+      "slug": "o-que-seu-sonho-conta",
+      "purpose": "Refletir sobre sonhos usando associações pessoais",
+      "voice": "Curiosa e observadora, sem interpretar como diagnóstico",
+      "firstQuestion": "Qual parte do seu sonho ficou mais viva na sua memória?",
+      "inputMode": "text",
+      "stages": [
+        {
+          "id": "situacao",
+          "title": "Relato do sonho"
+        },
+        {
+          "id": "perspectiva",
+          "title": "Imagens marcantes"
+        },
+        {
+          "id": "alternativas",
+          "title": "Associações pessoais"
+        },
+        {
+          "id": "acao",
+          "title": "Registro e reflexão"
+        }
+      ],
+      "previewOnly": true,
+      "contentReview": "pendente",
+      "sourceMaterial": "privado-nao-incluido",
+      "availability": "not_for_sale",
+      "disclaimer": "Reflexão educativa; não substitui atendimento psicológico, médico ou jurídico."
+    },
+    {
+      "slug": "reconheca-seu-valor",
+      "purpose": "Refletir sobre autovalorização, limites e reciprocidade",
+      "voice": "Gentil, objetiva e sem elogios automáticos",
+      "firstQuestion": "Em que momento você costuma sentir que entrega mais do que recebe?",
+      "inputMode": "choices",
+      "stages": [
+        {
+          "id": "situacao",
+          "title": "Ponto de partida"
+        },
+        {
+          "id": "perspectiva",
+          "title": "10 perguntas guiadas"
+        },
+        {
+          "id": "alternativas",
+          "title": "Reflexão de perfil"
+        },
+        {
+          "id": "acao",
+          "title": "Uma mudança possível"
+        }
+      ],
+      "previewOnly": true,
+      "contentReview": "pendente",
+      "sourceMaterial": "privado-nao-incluido",
+      "availability": "not_for_sale",
+      "disclaimer": "Reflexão educativa; não substitui atendimento psicológico, médico ou jurídico."
+    },
+    {
+      "slug": "nas-linhas-da-sua-mao",
+      "purpose": "Explorar a quiromancia como experiência simbólica",
+      "voice": "Poética, respeitosa e transparente quanto ao caráter recreativo",
+      "firstQuestion": "Você prefere descrever as linhas da mão ou enviar imagens quando essa função estiver disponível?",
+      "inputMode": "image_future",
+      "stages": [
+        {
+          "id": "situacao",
+          "title": "Escolher abordagem"
+        },
+        {
+          "id": "perspectiva",
+          "title": "Observar marcas"
+        },
+        {
+          "id": "alternativas",
+          "title": "Explorar símbolos"
+        },
+        {
+          "id": "acao",
+          "title": "Reflexão pessoal"
+        }
+      ],
+      "previewOnly": true,
+      "contentReview": "pendente",
+      "sourceMaterial": "privado-nao-incluido",
+      "availability": "not_for_sale",
+      "disclaimer": "Experiência simbólica e recreativa; não prevê o futuro nem substitui orientação profissional."
+    },
+    {
+      "slug": "conexoes-que-fazem-sentido",
+      "purpose": "Explorar dinâmicas afetivas com elementos simbólicos de numerologia",
+      "voice": "Afetuosa e clara, sem determinar compatibilidade de pessoas",
+      "firstQuestion": "O que você gostaria de compreender melhor numa relação importante para você?",
+      "inputMode": "name_date_optional",
+      "stages": [
+        {
+          "id": "situacao",
+          "title": "Questão da relação"
+        },
+        {
+          "id": "perspectiva",
+          "title": "Padrões percebidos"
+        },
+        {
+          "id": "alternativas",
+          "title": "Leitura simbólica opcional"
+        },
+        {
+          "id": "acao",
+          "title": "Diálogo e próximos passos"
+        }
+      ],
+      "previewOnly": true,
+      "contentReview": "pendente",
+      "sourceMaterial": "privado-nao-incluido",
+      "availability": "not_for_sale",
+      "disclaimer": "Experiência simbólica e recreativa; não prevê o futuro nem substitui orientação profissional."
+    },
+    {
+      "slug": "seu-mapa-em-numeros",
+      "purpose": "Oferecer leitura numerológica simbólica e explicação de cálculos",
+      "voice": "Leve, didática e explícita sobre limites científicos",
+      "firstQuestion": "Você quer explorar os números ligados ao seu nome ou ao seu aniversário?",
+      "inputMode": "name_date_optional",
+      "stages": [
+        {
+          "id": "situacao",
+          "title": "Dados opcionais"
+        },
+        {
+          "id": "perspectiva",
+          "title": "Cálculo verificável"
+        },
+        {
+          "id": "alternativas",
+          "title": "Interpretação simbólica"
+        },
+        {
+          "id": "acao",
+          "title": "Síntese para reflexão"
+        }
+      ],
+      "previewOnly": true,
+      "contentReview": "pendente",
+      "sourceMaterial": "privado-nao-incluido",
+      "availability": "not_for_sale",
+      "disclaimer": "Experiência simbólica e recreativa; não prevê o futuro nem substitui orientação profissional."
+    },
+    {
+      "slug": "mude-por-dentro",
+      "purpose": "Apoiar mudanças graduais de hábitos e organização pessoal",
+      "voice": "Encorajadora e prática, sem prometer curas ou resultados garantidos",
+      "firstQuestion": "Que hábito ou atitude você gostaria de mudar de forma possível para sua rotina?",
+      "inputMode": "text",
+      "stages": [
+        {
+          "id": "situacao",
+          "title": "Objetivo concreto"
+        },
+        {
+          "id": "perspectiva",
+          "title": "Contexto e obstáculos"
+        },
+        {
+          "id": "alternativas",
+          "title": "Plano pequeno"
+        },
+        {
+          "id": "acao",
+          "title": "Revisão do progresso"
+        }
+      ],
+      "previewOnly": true,
+      "contentReview": "pendente",
+      "sourceMaterial": "privado-nao-incluido",
+      "availability": "not_for_sale",
+      "disclaimer": "Reflexão educativa; não substitui atendimento psicológico, médico ou jurídico."
+    },
+    {
+      "slug": "amar-sem-se-perder",
+      "purpose": "Ajudar a identificar limites e necessidades em relacionamentos",
+      "voice": "Empática e firme, sem rotular terceiros",
+      "firstQuestion": "Em qual relação você sente que tem deixado suas próprias necessidades de lado?",
+      "inputMode": "text",
+      "stages": [
+        {
+          "id": "situacao",
+          "title": "Contexto da relação"
+        },
+        {
+          "id": "perspectiva",
+          "title": "Necessidades e limites"
+        },
+        {
+          "id": "alternativas",
+          "title": "Escolhas disponíveis"
+        },
+        {
+          "id": "acao",
+          "title": "Próxima conversa"
+        }
+      ],
+      "previewOnly": true,
+      "contentReview": "pendente",
+      "sourceMaterial": "privado-nao-incluido",
+      "availability": "not_for_sale",
+      "disclaimer": "Reflexão educativa; não substitui atendimento psicológico, médico ou jurídico."
+    },
+    {
+      "slug": "solte-esse-peso",
+      "purpose": "Distinguir responsabilidade, culpa e autocobrança",
+      "voice": "Calma e realista, sem julgamento",
+      "firstQuestion": "O que aconteceu que ainda faz você se cobrar tanto?",
+      "inputMode": "text",
+      "stages": [
+        {
+          "id": "situacao",
+          "title": "O fato concreto"
+        },
+        {
+          "id": "perspectiva",
+          "title": "Responsabilidade possível"
+        },
+        {
+          "id": "alternativas",
+          "title": "Reparação ou aceitação"
+        },
+        {
+          "id": "acao",
+          "title": "Pequeno compromisso"
+        }
+      ],
+      "previewOnly": true,
+      "contentReview": "pendente",
+      "sourceMaterial": "privado-nao-incluido",
+      "availability": "not_for_sale",
+      "disclaimer": "Reflexão educativa; não substitui atendimento psicológico, médico ou jurídico."
+    },
+    {
+      "slug": "coragem-para-ir",
+      "purpose": "Ajudar a reconhecer receios e preparar ações graduais",
+      "voice": "Próxima e corajosa, sem minimizar riscos reais",
+      "firstQuestion": "O que você gostaria de fazer, mas acaba adiando por receio?",
+      "inputMode": "text",
+      "stages": [
+        {
+          "id": "situacao",
+          "title": "A situação"
+        },
+        {
+          "id": "perspectiva",
+          "title": "O receio e os riscos"
+        },
+        {
+          "id": "alternativas",
+          "title": "Recursos e alternativas"
+        },
+        {
+          "id": "acao",
+          "title": "Primeiro passo seguro"
+        }
+      ],
+      "previewOnly": true,
+      "contentReview": "pendente",
+      "sourceMaterial": "privado-nao-incluido",
+      "availability": "not_for_sale",
+      "disclaimer": "Reflexão educativa; não substitui atendimento psicológico, médico ou jurídico."
+    }
+  ]
+}
