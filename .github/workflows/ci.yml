@@ -26,5 +26,7 @@ jobs:
         run: |
           node --check apps/web/app.js
           node --check apps/web/account.js
+          node --check apps/web/experience.js
       - name: Checar JSON do catálogo
         run: python -m json.tool apps/web/catalogo.json > /dev/null
+          python -m json.tool apps/web/experiencias.json > /dev/null
