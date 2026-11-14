@@ -13,8 +13,10 @@ app = FastAPI(title="Especialista — Nova Gente (sandbox)", version="0.2.0")
 
 from auth import router as identity_router
 from experiences import router as experiences_router
+from coragem_routes import router as coragem_router
 app.include_router(identity_router)
 app.include_router(experiences_router)
+app.include_router(coragem_router)
 
 class QuoteRequest(BaseModel):
     slugs: list[str] = Field(default_factory=list, max_length=13)
