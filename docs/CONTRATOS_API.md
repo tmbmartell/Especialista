@@ -17,7 +17,7 @@ cd apps/web && python3 -m http.server 8088 --bind 127.0.0.1
 ## Testes
 ```sh
 python3 -m pip install pytest httpx
-pytest -q apps/api/tests/test_api.py
+PYTHONPATH=apps/api pytest -q apps/api/tests/test_api.py
 ```
 
 ## Docker
