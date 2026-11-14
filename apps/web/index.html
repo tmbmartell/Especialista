@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f9f8f7">
+  <meta name="description" content="Especialista — seu espaço de autoconhecimento com assistentes que você escolhe.">
+  <title>Especialista — Nova Gente</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <header class="header shell">
+    <a class="brand" href="#" aria-label="Especialista — início"><span class="brand-mark">✳</span><span>especialista<small>por Nova Gente</small></span></a>
+    <nav aria-label="Navegação"><a href="#especialistas">Especialistas</a><a href="#como-funciona">Como funciona</a><a href="#carrinho">Meu carrinho</a></nav>
+    <span class="state">Prévia de desenvolvimento</span>
+  </header>
+  <main>
+    <section class="hero shell">
+      <div><p class="eyebrow">UM ESPAÇO PARA SE CONHECER MELHOR</p>
+        <h1>Uma escolha de cada vez. <em>No seu ritmo.</em></h1>
+        <p class="lead">Escolha especialistas que façam sentido para seu momento. Monte uma combinação só sua e, futuramente, converse pelo WhatsApp.</p>
+        <div class="actions"><a class="btn primary" href="#especialistas">Conhecer especialistas <span>↗</span></a><a class="btn ghost" href="#como-funciona">Entender como funciona</a></div>
+      </div>
+      <aside class="hero-card"><div class="orbit">✺</div><p class="eyebrow">SUA JORNADA, SUAS ESCOLHAS</p><h2>Você não precisa resolver tudo de uma vez.</h2><p>Encontre um ponto de partida. Depois, acrescente novas perspectivas quando quiser.</p><span>♡ Um único espaço · Muitos caminhos</span></aside>
+    </section>
+    <section class="benefits"><div class="shell benefits-inner"><span>✦ Escolha sem pacotes fechados</span><span>✦ Adicione especialistas ao seu plano</span><span>✦ Um WhatsApp para conversar com todos*</span></div></section>
+    <section id="especialistas" class="catalog shell">
+      <p class="eyebrow">ENCONTRE O SEU PONTO DE PARTIDA</p><h2>O que você gostaria de explorar hoje?</h2>
+      <p class="section-intro">Cada especialista tem uma proposta diferente. Comece por aquilo que faz sentido agora.</p>
+      <div id="filters" class="filters" aria-label="Categorias"></div>
+      <div id="cards" class="cards" aria-live="polite"></div>
+    </section>
+    <section id="carrinho" class="checkout shell">
+      <div><p class="eyebrow">ASSINATURA MODULAR</p><h2>Monte seu espaço.</h2><p>O primeiro especialista custa R$ 9,90/mês. Cada novo especialista acrescenta R$ 4,99/mês ao plano.</p><p class="warning">Demonstração: nenhuma compra ou ativação de WhatsApp ocorre nesta página.</p></div>
+      <div class="cart">
+        <h3>Minha seleção <span id="count">0</span></h3>
+        <ul id="selected" aria-live="polite"><li>Escolha um especialista para começar.</li></ul>
+        <div class="cart-sum"><span>Total mensal simulado</span><strong id="amount">R$ 0,00</strong></div>
+        <button id="simulate" type="button" disabled>Simular meu plano</button>
+        <p id="checkout-note" class="fine">Pagamento e assinatura ainda não estão disponíveis.</p>
+      </div>
+    </section>
+    <section id="como-funciona" class="steps shell"><p class="eyebrow">SIMPLES DESDE O INÍCIO</p><h2>Como vai funcionar</h2>
+      <div class="step-grid"><article><b>01</b><h3>Escolha</h3><p>Selecione especialistas para seu momento.</p></article><article><b>02</b><h3>Crie sua conta</h3><p>Protegida e vinculada ao seu número.</p></article><article><b>03</b><h3>Ative</h3><p>Após confirmação do pagamento, habilite seu acesso por código.</p></article><article><b>04</b><h3>Converse</h3><p>Troque de especialista em um único WhatsApp.</p></article></div>
+    </section>
+  </main>
+  <footer class="shell"><span>Especialista · Nova Gente</span><span>*WhatsApp, pagamentos e IA ainda não integrados. Proposta educativa, não clínica.</span></footer>
+</body>
+</html>
