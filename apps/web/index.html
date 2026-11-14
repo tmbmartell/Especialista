@@ -11,6 +11,7 @@
   <script defer src="./app.js"></script>
   <script defer src="./account.js"></script>
   <script defer src="./coragem-demo.js"></script>
+  <script defer src="./pilot-demo.js"></script>
 </head>
 <body>
   <header class="header shell">
@@ -66,6 +67,22 @@
       </div>
     </form>
     <p id="coragem-status" class="experience-status">Roteiro de teste, sem IA real.</p>
+  </dialog>
+  <dialog id="pilot-dialog" class="account-dialog coragem-dialog" aria-label="Conversa de especialista em demonstração">
+    <header class="coragem-header">
+      <div><p class="eyebrow">ESPECIALISTA · PRÉVIA</p><h2 id="pilot-title">Vamos conversar?</h2><span id="pilot-progress">Iniciando</span></div>
+      <button id="pilot-close" class="account-close" type="button" aria-label="Fechar conversa">×</button>
+    </header>
+    <div id="pilot-log" class="coragem-log" role="log" aria-live="polite"></div>
+    <form id="pilot-form" class="coragem-form">
+      <label for="pilot-input">Sua resposta</label>
+      <textarea id="pilot-input" maxlength="1000" rows="2" placeholder="Responda com suas palavras…"></textarea>
+      <div class="coragem-actions">
+        <button id="pilot-reset" class="coragem-restart" type="button">Recomeçar</button>
+        <button id="pilot-send" class="account-action" type="submit">Enviar</button>
+      </div>
+    </form>
+    <p id="pilot-status" class="experience-status">Prévia de teste sem IA.</p>
   </dialog>
 </body>
 </html>
