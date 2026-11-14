@@ -3,6 +3,7 @@
 Não ativar publicamente antes de e-mail verificado, antifraude, banco de produção
 e gateway de pagamentos. Nenhuma rota concede acesso aos especialistas.
 """
+import json
 import hashlib
 import hmac
 import os
