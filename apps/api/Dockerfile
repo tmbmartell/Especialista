@@ -7,6 +7,9 @@ COPY apps/api/auth.py /app/auth.py
 COPY apps/api/experiences.py /app/experiences.py
 COPY apps/api/coragem_routes.py /app/coragem_routes.py
 COPY apps/api/coragem_engine.py /app/coragem_engine.py
+COPY apps/api/culpa_engine.py /app/culpa_engine.py
+COPY apps/api/autovalor_engine.py /app/autovalor_engine.py
+COPY apps/api/pilot_routes.py /app/pilot_routes.py
 COPY apps/web/catalogo.json /app/catalogo.json
 COPY apps/web/experiencias.json /app/experiencias.json
 ENV CATALOG_PATH=/app/catalogo.json
