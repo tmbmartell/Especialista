@@ -33,3 +33,35 @@ Loja modular de especialistas de IA para experiências de autoconhecimento pelo 
 F0 Inventário e revisão de conteúdo → F1 Fundação → F2 Módulos → F3 IA/JEV → F4 WhatsApp → F5 Cobranças → F6 Interface final → F7 Segurança → F8 Publicação.
 
 **Atenção:** não disponibilizar a versão de desenvolvimento como serviço comercial antes das integrações e testes.
+
+
+## F1 — Sandbox de contas e carrinho (13/11/2026)
+
+A aplicação de demonstração agora inclui cadastro/login, sessões com cookie HttpOnly,
+proteção CSRF, limite de tentativas de login, carrinho persistente por usuário e pedidos
+em estado `awaiting_payment`. **Nenhum pedido concede acesso, não há cobrança e
+não há WhatsApp ou IA conectados.**
+
+Executar localmente:
+
+```sh
+docker compose -f infra/docker-compose.demo.yml up --build
+# Acesse http://127.0.0.1:8088
+```
+
+Testar:
+
+```sh
+python3 -m pip install -r apps/api/requirements.txt
+python3 -m pip install pytest httpx
+PYTHONPATH=apps/api pytest -q apps/api/tests/
+```
+
+A verificação isolada de 13 testes foi concluída com sucesso. Consulte
+[contratos da API](docs/CONTRATOS_API.md) e
+[pendências de identidade e isolamento](https://github.com/tmbmartell/Especialista/issues/1).
+
+**Não disponibilize essa demonstração para clientes:** o login é somente para teste,
+o e-mail não é verificado, há SQLite e não PostgreSQL, e o projeto permanece
+em fases iniciais. Metodologias proprietárias e segredos não pertencem ao
+repositório público.
