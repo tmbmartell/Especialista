@@ -24,7 +24,10 @@
       add.type='button'; add.dataset.slug=product.slug; add.setAttribute('aria-pressed',String(selected.has(product.slug)));
       if(selected.has(product.slug)) add.classList.add('added');
       add.onclick=()=>{if(selected.has(product.slug)) selected.delete(product.slug); else selected.add(product.slug);renderCards();renderCart();emitSelection();};
-      c.append(visual,label,title,desc,add); box.append(c);
+      const peek=make('button','preview','Conhecer experiência');
+      peek.type='button';
+      peek.onclick=()=>window.showExperiencePreview?.(product.slug);
+      c.append(visual,label,title,desc,peek,add); box.append(c);
     }
   }
   function renderCart() {
