@@ -13,6 +13,7 @@
   let state = null;
   let csrf = null;
   let pending = false;
+  let generation = 0;
 
   function line(kind, text) {
     const p=document.createElement('p');
@@ -40,6 +41,7 @@
     return data;
   }
   async function begin() {
+    const currentGeneration=++generation;
     state=null;csrf=null;pending=true;
     log.replaceChildren();
     textarea.value='';
@@ -49,6 +51,7 @@
     if(!dialog.open) dialog.showModal();
     try {
       const auth=await fetch('/api/auth/me',{credentials:'same-origin'});
+      if(currentGeneration!==generation || !dialog.open) return;
       if(!auth.ok) {
         line('system','Para experimentar, entre numa conta de teste. Não utilize histórias pessoais sensíveis neste ambiente.');
         status.textContent='Apenas no sandbox local. Faça login primeiro.';
@@ -63,6 +66,7 @@
       }
       const user=await auth.json();csrf=user.csrf_token;
       const data=await post('',{step:'goal',answers:{}});
+      if(currentGeneration!==generation || !dialog.open) return;
       state=data.state;
       line('assistant',data.reply);
       updateUI(state.step,data.done);
@@ -76,6 +80,7 @@
   form.addEventListener('submit',async event=>{
     event.preventDefault();
     if(pending || !csrf || !state) return;
+    const currentGeneration=generation;
     const text=textarea.value.trim();
     if(!text) return;
     pending=true;
@@ -84,6 +89,7 @@
     textarea.value='';
     try {
       const data=await post(text,state);
+      if(currentGeneration!==generation || !dialog.open) return;
       state=data.state;
       line('assistant',data.reply);
       updateUI(state.step,data.done);
@@ -91,12 +97,13 @@
         ? 'Prévia técnica · Sem IA, pagamentos ou WhatsApp.'
         : 'O roteiro foi interrompido para priorizar segurança.';
     } catch(error) {
+      if(currentGeneration!==generation || !dialog.open) return;
       line('system','Não foi possível responder agora: '+error.message);
       textarea.value=text;send.disabled=false;
     } finally {
       pending=false;
       log.scrollTop=log.scrollHeight;
-      if(!textarea.disabled) textarea.focus({preventScroll:true});
+      if(dialog.open && !textarea.disabled) textarea.focus({preventScroll:true});
     }
   });
   resetButton.addEventListener('click',()=>{
@@ -106,6 +113,7 @@
   closeButton.addEventListener('click',()=>dialog.close());
   dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
   dialog.addEventListener('close',()=>{
+    generation++;
     // Nada fica no localStorage; ao fechar, descartamos o estado privado da prévia.
     state=null;csrf=null;pending=false;
     textarea.value='';log.replaceChildren();
