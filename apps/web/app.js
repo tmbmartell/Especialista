@@ -23,7 +23,7 @@
       const add=make('button','add',selected.has(product.slug) ? '✓ Adicionado — retirar' : '+ Adicionar ao plano');
       add.type='button'; add.dataset.slug=product.slug; add.setAttribute('aria-pressed',String(selected.has(product.slug)));
       if(selected.has(product.slug)) add.classList.add('added');
-      add.onclick=()=>{if(selected.has(product.slug)) selected.delete(product.slug); else selected.add(product.slug);renderCards();renderCart();};
+      add.onclick=()=>{if(selected.has(product.slug)) selected.delete(product.slug); else selected.add(product.slug);renderCards();renderCart();emitSelection();};
       c.append(visual,label,title,desc,add); box.append(c);
     }
   }
@@ -37,9 +37,18 @@
     picked.forEach((p,i)=>{
       const li=make('li','');li.append(make('span','',p.name),make('strong','',i===0?money(990):money(499)));
       const rm=make('button','', 'Retirar');rm.type='button';rm.setAttribute('aria-label','Retirar '+p.name);
-      rm.onclick=()=>{selected.delete(p.slug);renderCards();renderCart();};li.append(rm);ul.append(li);
+      rm.onclick=()=>{selected.delete(p.slug);renderCards();renderCart();emitSelection();};li.append(rm);ul.append(li);
     });
   }
+  function emitSelection() { window.dispatchEvent(new CustomEvent('especialista:selection',{detail:[...selected]})); }
+  window.EspecialistaStore = {
+    getSelection: () => [...selected],
+    setSelection(slugs) {
+      selected.clear();
+      for (const slug of slugs) selected.add(slug);
+      if (catalog.length) {renderCards();renderCart();}
+    }
+  };
   async function init() {
     try {
       const response=await fetch('./catalogo.json',{cache:'no-store'});
