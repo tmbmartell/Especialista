@@ -279,7 +279,7 @@
     {
       "slug": "mude-por-dentro",
       "purpose": "Apoiar mudanças graduais de hábitos e organização pessoal",
-      "voice": "Encourajadora sem prometer curas ou resultados garantidos",
+      "voice": "Encorajadora e prática, sem prometer curas ou resultados garantidos",
       "firstQuestion": "Que hábito ou atitude você gostaria de mudar de forma possível para sua rotina?",
       "inputMode": "text",
       "stages": [
