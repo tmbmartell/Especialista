@@ -15,3 +15,17 @@
 .account-error{color:#a52747;min-height:1em;font-size:13px}
 .account-summary{font-weight:700}
 .account-orders{background:#f9f7f7;padding:12px;border-radius:10px}
+
+/* Prévia pública: sem conteúdo interno de metodologias */
+.card .preview{background:#f8f2f5;border:1px solid #e3c8d6;color:#8c4d6c;border-radius:11px;padding:11px;cursor:pointer;font-size:13px;font-weight:650;margin-top:auto}
+.card .preview:hover{background:#f3e6ed}
+.card .add{margin-top:0}
+.experience-dialog{max-width:520px}
+.experience-purpose{color:#6d6570;line-height:1.6}
+.experience-message{background:#f3f9f7;border:1px solid #daeae3;border-radius:15px;padding:17px;margin-top:18px}
+.experience-message small{display:block;color:#568779;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.experience-message p{font:normal 20px/1.35 Georgia,serif;margin-bottom:3px}
+.experience-subheading{font-weight:750;margin-top:20px}
+.experience-stages{padding-left:24px;line-height:2;color:#675d68;font-size:14px}
+.experience-disclaimer{font-size:12px;color:#716b70;border-top:1px solid #ebe5e8;padding-top:12px}
+.experience-status{font-size:12px;color:#a35a7b}
