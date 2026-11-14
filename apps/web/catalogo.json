@@ -1,0 +1,126 @@
+{
+  "brand": "Nova Gente",
+  "product": "Especialista",
+  "stage": "vitrine_de_demonstracao",
+  "firstPriceCents": 990,
+  "extraPriceCents": 499,
+  "items": [
+    {
+      "slug": "a-virada-de-chave",
+      "name": "A Virada de Chave",
+      "category": "Autoconhecimento",
+      "description": "Perceba padrões e escolha novos caminhos.",
+      "icon": "spark",
+      "priceAdditionCents": 499,
+      "reviewStatus": "pending"
+    },
+    {
+      "slug": "quebre-o-ciclo",
+      "name": "Quebre o Ciclo",
+      "category": "Autoconhecimento",
+      "description": "Reconheça repetições e experimente novas escolhas.",
+      "icon": "cycle",
+      "priceAdditionCents": 499,
+      "reviewStatus": "pending"
+    },
+    {
+      "slug": "cartas-e-caminhos",
+      "name": "Cartas e Caminhos",
+      "category": "Símbolos e oráculos",
+      "description": "Use símbolos do tarô para refletir sobre escolhas.",
+      "icon": "cards",
+      "priceAdditionCents": 499,
+      "reviewStatus": "pending"
+    },
+    {
+      "slug": "raizes-e-lacos",
+      "name": "Raízes e Laços",
+      "category": "Relações",
+      "description": "Olhe para vínculos e histórias familiares com mais clareza.",
+      "icon": "tree",
+      "priceAdditionCents": 499,
+      "reviewStatus": "pending"
+    },
+    {
+      "slug": "o-que-seu-sonho-conta",
+      "name": "O Que Seu Sonho Conta?",
+      "category": "Símbolos e oráculos",
+      "description": "Explore sonhos e suas associações pessoais.",
+      "icon": "moon",
+      "priceAdditionCents": 499,
+      "reviewStatus": "pending"
+    },
+    {
+      "slug": "reconheca-seu-valor",
+      "name": "Reconheça Seu Valor",
+      "category": "Autoconhecimento",
+      "description": "Observe como você se percebe e se posiciona.",
+      "icon": "heart",
+      "priceAdditionCents": 499,
+      "reviewStatus": "pending"
+    },
+    {
+      "slug": "nas-linhas-da-sua-mao",
+      "name": "Nas Linhas da Sua Mão",
+      "category": "Símbolos e oráculos",
+      "description": "Explore símbolos nas mãos de maneira recreativa.",
+      "icon": "hand",
+      "priceAdditionCents": 499,
+      "reviewStatus": "pending"
+    },
+    {
+      "slug": "conexoes-que-fazem-sentido",
+      "name": "Conexões que Fazem Sentido",
+      "category": "Relações",
+      "description": "Reflita sobre convivência, vínculos e afeto.",
+      "icon": "links",
+      "priceAdditionCents": 499,
+      "reviewStatus": "pending"
+    },
+    {
+      "slug": "seu-mapa-em-numeros",
+      "name": "Seu Mapa em Números",
+      "category": "Símbolos e oráculos",
+      "description": "Uma jornada simbólica pela numerologia.",
+      "icon": "number",
+      "priceAdditionCents": 499,
+      "reviewStatus": "pending"
+    },
+    {
+      "slug": "mude-por-dentro",
+      "name": "Mude por Dentro",
+      "category": "Autoconhecimento",
+      "description": "Crie hábitos e mudanças graduais.",
+      "icon": "seed",
+      "priceAdditionCents": 499,
+      "reviewStatus": "pending"
+    },
+    {
+      "slug": "amar-sem-se-perder",
+      "name": "Amar Sem Se Perder",
+      "category": "Relações",
+      "description": "Fortaleça sua autonomia e seus limites afetivos.",
+      "icon": "flower",
+      "priceAdditionCents": 499,
+      "reviewStatus": "pending"
+    },
+    {
+      "slug": "solte-esse-peso",
+      "name": "Solte Esse Peso",
+      "category": "Autoconhecimento",
+      "description": "Reflita sobre culpa e autocobrança.",
+      "icon": "feather",
+      "priceAdditionCents": 499,
+      "reviewStatus": "pending"
+    },
+    {
+      "slug": "coragem-para-ir",
+      "name": "Coragem para Ir",
+      "category": "Autoconhecimento",
+      "description": "Encontre pequenos passos mesmo quando há medo.",
+      "icon": "sun",
+      "priceAdditionCents": 499,
+      "reviewStatus": "pending"
+    }
+  ]
+}
