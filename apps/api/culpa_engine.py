@@ -6,6 +6,7 @@ Não reproduz questionários nem marcas do material restrito de terceiros.
 import re
 from typing import Literal
 from pydantic import BaseModel, Field
+from conversation_adaptation import intervene
 from coragem_engine import STOP, RESTART, BACK, SKIP, UNKNOWN, CRISIS, DANGER
 
 Stage = Literal["episode","emotion","certainty","control","repair","action","done"]
@@ -67,6 +68,10 @@ def turn(message: str, state: GuiltState | None = None) -> GuiltResult:
         return GuiltResult(reply="Sinto muito que isso esteja tão difícil. Sua segurança vem primeiro. Procure ajuda de emergência se houver risco imediato e avise alguém de confiança. Você está em segurança agora?",state=state,safety="crisis")
     if DANGER.search(content):
         return GuiltResult(reply="Se existe ameaça ou violência, sua segurança vem antes de qualquer conversa ou reparação. Procure um local seguro e apoio de confiança. Você está em segurança agora?",state=state,safety="danger")
+    # Não avançar a jornada quando a pessoa pede esclarecimento ou corrige a leitura.
+    intervention = intervene(content, "solte-esse-peso", state.step)
+    if intervention is not None:
+        return GuiltResult(reply=intervention.reply, state=state)
     if cmd in STOP:
         return GuiltResult(reply="Tudo bem encerrar. Você pode retomar quando quiser, sem cobrança.",state=GuiltState(step="done"),done=True)
     if cmd in RESTART:

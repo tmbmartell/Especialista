@@ -71,7 +71,8 @@ def test_value_tie_and_non_diagnostic():
 def test_value_freetext_skip_and_back():
     state=ValueState()
     invalid=value_turn("Eu costumo ajudar de várias formas.",state)
-    assert invalid.state.index==0
+    assert invalid.state.index==1 and invalid.state.choices==["-"]
+    assert "0" in invalid.state.notes
     r=value_turn("minha resposta: ouvi e organizei, depende da situação",state)
     assert r.state.index==1 and r.state.choices==["-"]
     assert "0" in r.state.notes

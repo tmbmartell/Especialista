@@ -8,6 +8,7 @@ import re
 from typing import Literal
 
 from pydantic import BaseModel, Field
+from conversation_adaptation import intervene
 
 Step = Literal["goal", "impact", "prediction", "evidence", "choice", "timing", "done"]
 ORDER = ("goal", "impact", "prediction", "evidence", "choice", "timing")
@@ -103,6 +104,10 @@ def talk(message: str, supplied: JourneyState | None = None) -> TurnResult:
                    "Priorize um lugar seguro e apoio de alguém de confiança. "
                    "Você está em segurança agora?"),
             state=state, safety="danger")
+    # Não avançar a jornada quando a pessoa pede esclarecimento ou corrige a leitura.
+    intervention = intervene(content, "coragem-para-ir", state.step)
+    if intervention is not None:
+        return TurnResult(reply=intervention.reply, state=state)
     if command in RESTART:
         return TurnResult(reply="Vamos começar de novo, no seu ritmo. " + QUESTIONS["goal"],
                           state=JourneyState())

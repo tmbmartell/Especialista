@@ -96,3 +96,17 @@ O contrato de estilo compartilhado pelos 13 perfis está em
 [Engenharia de Conversa](docs/ENGENHARIA_CONVERSA.md).
 
 Validação em sandbox isolado: **35 testes automatizados aprovados**.
+
+
+## Escuta adaptativa V1 — pilotos em desenvolvimento
+
+Os três especialistas do primeiro lote (`Coragem para Ir`, `Solte Esse Peso` e
+`Reconheça Seu Valor`) agora recebem solicitações explícitas como
+“não entendi”, “não foi bem isso”, “já tentei” e “pode dar um exemplo?”
+**sem avançar a etapa**. O autovalor aceita respostas livres sem inventar
+pontuação. [Detalhes e limites](docs/ESCUTA_ADAPTATIVA_V1.md).
+
+Esta é uma camada **determinística**, ainda sem IA conversacional
+conectada. Na bateria parcial atual, **50 testes passaram**. O projeto
+continua em sandbox e não concede assinaturas nem usa metodologias
+proprietárias não licenciadas.
