@@ -125,7 +125,7 @@ def talk(message: str, supplied: JourneyState | None = None) -> TurnResult:
     if command in UNKNOWN:
         return TurnResult(reply=HINTS[state.step], state=state)
     if len(content) < 2 and command not in SKIP:
-        return TurnResult(reply="Pode me contar um pouquinho mais? " + QUESTIONS[state.step], state=state)
+        return TurnResult(reply="Pode me contar um pouquinho mais. " + QUESTIONS[state.step], state=state)
 
     answers = dict(state.answers)
     answers[state.step] = "Prefiro não responder" if command in SKIP else JourneyState.clean(content)
