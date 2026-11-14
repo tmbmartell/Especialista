@@ -6,6 +6,7 @@ A resposta não mede valor humano, mérito ou capacidade financeira.
 import re
 from typing import Literal
 from pydantic import BaseModel, Field
+from conversation_adaptation import intervene
 from coragem_engine import STOP, RESTART, BACK, SKIP, UNKNOWN, CRISIS, DANGER
 
 # Os enunciados e alternativas abaixo foram escritos para este produto,
@@ -75,6 +76,10 @@ def turn(message:str,state:ValueState|None=None)->ValueResult:
         return ValueResult(reply="Sinto muito que esteja tão difícil. Sua segurança vale mais que qualquer questionário. Em risco imediato, procure ajuda de emergência e alguém de confiança. Você está em segurança agora?",state=state,safety="crisis")
     if DANGER.search(content):
         return ValueResult(reply="Se existe ameaça ou violência, priorize proteção, não um teste de valor pessoal. Busque apoio de confiança e um lugar seguro. Você está em segurança agora?",state=state,safety="danger")
+    # Não avançar a jornada quando a pessoa pede esclarecimento ou corrige a leitura.
+    intervention = intervene(content, "reconheca-seu-valor", state.index)
+    if intervention is not None:
+        return ValueResult(reply=intervention.reply, state=state)
     if cmd in STOP:
         return ValueResult(reply="Tudo bem parar aqui. Seu valor não depende de completar um questionário.",state=ValueState(index=10),done=True)
     if cmd in RESTART:
@@ -93,11 +98,11 @@ def turn(message:str,state:ValueState|None=None)->ValueResult:
     notes=dict(state.notes)
     if answer in KEYS or cmd in SKIP:
         chosen=answer if answer in KEYS else "-"
-    elif cmd.startswith("minha resposta:") and len(content.split(":",1)[1].strip())>=2:
-        chosen="-"
-        notes[str(state.index)]=content.split(":",1)[1].strip()[:MAX_NOTES]
+    elif len(content) >= 2:
+        chosen="-"  # Texto livre não vira pontuação fictícia.
+        notes[str(state.index)]=(content.split(":",1)[1].strip() if cmd.startswith("minha resposta:") else content)[:MAX_NOTES]
     else:
-        return ValueResult(reply="Sua resposta pode ser diferente das alternativas. Para pontuar, envie A, B, C ou D. Para seguir com suas palavras, escreva «minha resposta: ...».",state=state)
+        return ValueResult(reply="Você pode escolher A, B, C ou D ou responder com suas palavras.",state=state)
     next_state=ValueState(index=state.index+1,choices=[*state.choices,chosen],notes=notes)
     if next_state.index==10:
         return ValueResult(reply=_final(next_state),state=next_state,done=True)
